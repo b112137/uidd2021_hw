@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html>
+    <head> 
+        <script src="jquery.js"></script>
+    </head>
+    <body>
+        <div class = "background">
+            <img src="src/第二頁/2-舉球.png" class = "setter" type = "button" onclick="setter_button()">
+            <img src="src/第二頁/2-中間手.png" class = "middle" type = "button" onclick="middle_button()">
+            <img src="src/第二頁/2-主攻.png" class = "hitter" type = "button" onclick="test()">
+            <img src="src/第二頁/2-自由球員.png" class = "libero" type = "button" onclick="libero_button()">
+            
+            <div style="display: none;" id="setter_back_id"> 
+                <img src="src/第三頁(舉球)/3-背景.jpg" class = "click_back">
+                <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
+                <div class="div_limit">
+                    <img src="src/第三頁(舉球)/3-字-cut.png" class="word">
+                    <div style="position: absolute; left: 45px;">
+                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: none;" id="middle_back_id"> 
+                <img src="src/第四頁(中間手)/4-背景.jpg" class = "click_back">
+                <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
+                <div class="div_limit">
+                    <img src="src/第四頁(中間手)/4-字-cut.png" class="word">
+                    <div style="position: absolute; left: 45px;">
+                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+
+            <div style="display: none;" id="libero_back_id"> 
+                <img src="src/第五頁(自由球員)/5-背景.jpg" class = "click_back">
+                <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
+                <div class="div_limit">
+                    <img src="src/第五頁(自由球員)/5-字-cut.png" class="word">
+                    <div style="position: absolute; left: 45px;">
+                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    .background {
+        background-image: url("src/第二頁/2-背景.jpg");
+        background-repeat: no-repeat;
+
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-size: auto 100vh;
+        z-index: -1;
+    }
+
+    .setter {
+        position: absolute;
+        left: 42vw;
+        top: 38vh;
+        width: 12.5vh;        
+        z-index: 5;
+    }
+    
+    .setter:hover{
+        position: absolute;
+        left: 42vw;
+        top: 37vh;
+        width: 13.5vh;        
+        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+    }
+
+    .middle{
+        position: absolute;
+        left: 61vw;
+        top: 48vh;
+        width: 15vh;        
+        z-index: 4;
+    }
+
+    .middle:hover{
+        position: absolute;
+        left: 61vw;
+        top: 48vh;
+        width: 16vh;        
+        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+    }
+
+    .hitter{
+        position: absolute;
+        left: 75vw;
+        top: 52vh;
+        width: 22vh;        
+        z-index: 3;
+    }
+
+    .hitter:hover{
+        position: absolute;
+        left: 75vw;
+        top: 51vh;
+        width: 23vh;        
+        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+    }
+
+    .libero{
+        position: absolute;
+        left: 52vw;
+        top: 39vh;
+        width: 16vh;        
+        z-index: 2;
+    }
+
+    .libero:hover{
+        position: absolute;
+        left: 51.5vw;
+        top: 39vh;
+        width: 17vh;        
+        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+    }
+
+    .click_back{
+        position: absolute;
+        left: 7.7vw;
+        height: 100vh;        
+        z-index: 5;
+    }
+
+    #back_button{
+        position: absolute;
+        left: 30vw;
+        top: 7vh;
+        width: 180px;        
+        z-index: 6;
+    }
+
+    .div_limit{
+        position: absolute;
+        height: 500px;
+        width: 733px;
+        left: 41.05vw;
+        top: 28vh;
+        overflow-y: auto;
+        z-index: 7;
+    }
+
+    .word{
+        width: 35vw;
+        height: auto;
+    }
+
+    .div_limit::-webkit-scrollbar {
+        width:7px;
+        height:500px;
+    }
+
+    /*滾動條裡面小方塊樣式*/
+    .div_limit::-webkit-scrollbar-thumb {
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius:100px;
+        background:rgb(201, 201, 201);
+    }
+
+    /*滾動條裡面軌道樣式*/
+    .div_limit::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 5px rgba(0,0,0,0.2);
+        border-radius: 100px;
+        background:rgb(142, 142, 142);
+    }
+
+</style>
+
+<script>
+    function setter_button(){
+        $("#setter_back_id").show();
+    }
+
+    function middle_button(){
+        $("#middle_back_id").show();
+    }
+
+    function libero_button(){
+        $("#libero_back_id").show();
+    }
+
+    function back(){
+        $("#setter_back_id").hide();
+        $("#middle_back_id").hide();
+        $("#libero_back_id").hide();
+    }
+</script>

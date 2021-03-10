@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <div class = "background">
+            <div>
+                <a  href = "./choose.html">
+                    <img src="src/第一頁/1-按鈕.png" class = "go_button" type = "button" onclick="test()">
+                </a>
+            </div>
+        </div>
+    </body>
+</html>
+
+<style>
+    .background {
+        background-image: url("src/第一頁/1-背景.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        display: flex;
+        flex-direction: column;
+        height: 100vh;
+        background-size: auto 100vh;
+        z-index: -1;
+    }
+
+    .background_image {
+        position:absolute;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        z-index: -1;
+    }
+    .go_button {   
+        position: absolute;
+        left: 42.5vw;
+        top: 58vh;
+        width: 180px;        
+        z-index: 1;
+    }
+
+    .go_button:hover {
+        position: absolute;
+        left: 42vw;
+        top: 57.5vh;
+        width: 200px;        
+        box-shadow: 0px 0px 15px rgba(255, 255, 255, 255);
+    }
+</style>
+
+<script>
+
+</script>
