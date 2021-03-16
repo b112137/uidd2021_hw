@@ -7,46 +7,40 @@
     
     <body>
         <div class = "background">
-            <img src="src/第二頁/2-舉球.png" class = "setter" type = "button" onclick="setter_button()">
-            <img src="src/第二頁/2-中間手.png" class = "middle" type = "button" onclick="middle_button()">
-            <img src="src/第二頁/2-主攻.png" class = "hitter" type = "button" onclick="test()">
-            <img src="src/第二頁/2-自由球員.png" class = "libero" type = "button" onclick="libero_button()">
+            <div class = "setter" type = "button" onclick="setter_button()"></div>
+            <div class = "middle" type = "button" onclick="middle_button()"></div>
+            <div class = "hitter" type = "button" onclick="test()"></div>
+            <div class = "libero" type = "button" onclick="libero_button()"></div>
             
             <div style="display: none;" id="setter_back_id"> 
-                <img src="src/第三頁(舉球)/3-背景.jpg" class = "click_back">
                 <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
                 <div class="div_limit">
                     <img src="src/第三頁(舉球)/3-字-cut.png" class="word">
-                    <div style="position: absolute; left: 45px;">
-                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div style="position: relative; left: 2.5vw; width: 35vw; height: 22vw">
+                        <iframe style="position: relative; width: 35vw; height: 22vw" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
             <div style="display: none;" id="middle_back_id"> 
-                <img src="src/第四頁(中間手)/4-背景.jpg" class = "click_back">
                 <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
                 <div class="div_limit">
                     <img src="src/第四頁(中間手)/4-字-cut.png" class="word">
-                    <div style="position: absolute; left: 45px;">
-                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div style="position: relative; left: 2.5vw; width: 35vw; height: 22vw">
+                        <iframe style="position: relative; width: 35vw; height: 22vw" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
 
             <div style="display: none;" id="libero_back_id"> 
-                <img src="src/第五頁(自由球員)/5-背景.jpg" class = "click_back">
                 <img src="src/第一頁/1-按鈕.png" id = "back_button" type = "button" onclick="back()">
                 <div class="div_limit">
                     <img src="src/第五頁(自由球員)/5-字-cut.png" class="word">
-                    <div style="position: absolute; left: 45px;">
-                        <iframe width="448" height="252" src="https://www.youtube.com/embed/otx77Rww43E" 
-                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
-                                encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    <div style="position: relative; left: 2.5vw; width: 35vw; height: 22vw">
+                        <iframe style="position: relative; width: 35vw; height: 22vw" src="https://www.youtube.com/embed/otx77Rww43E" 
+                                frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
@@ -55,114 +49,198 @@
 </html>
 
 <style>
+    body {
+        margin :0;
+        padding: 0;
+        overflow-x: hidden;
+    }
+
     .background {
         background-image: url("src/第二頁/2-背景.jpg");
         background-repeat: no-repeat;
-
         background-position: center;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background-size: auto 100vh;
+
+        width: 100vw;
+        height: 56.25vw;
+        background-size: 100vw auto;
+
         z-index: -1;
     }
 
     .setter {
+        background-image: url("src/第二頁/2-舉球.png");
+        background-repeat: no-repeat;
+        background-position: center;
+
         position: absolute;
-        left: 42vw;
-        top: 38vh;
-        width: 12.5vh;        
-        z-index: 5;
+        width: 6.5vw;
+        height: 22vw;
+        background-size: 6.5vw auto;
+        
+        left: 40vw;
+        top: 20vw;
+        z-index: 1;
     }
     
     .setter:hover{
-        position: absolute;
-        left: 42vw;
-        top: 37vh;
-        width: 13.5vh;        
-        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+        width: 7vw;
+        height: 22.5vw;
+        background-size: 7vw auto;
+        left: 40vw;
+        top: 20vw;
     }
 
     .middle{
+        background-image: url("src/第二頁/2-中間手.png");
+        background-repeat: no-repeat;
+        background-position: center;
+
         position: absolute;
-        left: 61vw;
-        top: 48vh;
-        width: 15vh;        
-        z-index: 4;
+        width: 8vw;
+        height: 16vw;
+        background-size: 8vw auto;
+        
+        left: 62vw;
+        top: 26vw;
+        z-index: 1;
     }
 
     .middle:hover{
-        position: absolute;
-        left: 61vw;
-        top: 48vh;
-        width: 16vh;        
-        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+        width: 8.5vw;
+        height: 16.5vw;
+        background-size: 8.5vw auto;
+        left: 62vw;
+        top: 26vw;
     }
 
     .hitter{
+        background-image: url("src/第二頁/2-主攻.png");
+        background-repeat: no-repeat;
+        background-position: center;
+
         position: absolute;
-        left: 75vw;
-        top: 52vh;
-        width: 22vh;        
-        z-index: 3;
+        width: 12vw;
+        height: 20vw;
+        background-size: 12vw auto;
+        
+        left: 81vw;
+        top: 27vw;
+        z-index: 1;
     }
 
     .hitter:hover{
-        position: absolute;
-        left: 75vw;
-        top: 51vh;
-        width: 23vh;        
-        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+        width: 12.5vw;
+        height: 20.5vw;
+        background-size: 12.5vw auto;
+        left: 81vw;
+        top: 27vw;    
     }
 
     .libero{
+        background-image: url("src/第二頁/2-自由球員.png");
+        background-repeat: no-repeat;
+        background-position: center;
+
         position: absolute;
-        left: 52vw;
-        top: 39vh;
-        width: 16vh;        
-        z-index: 2;
+        width: 9vw;
+        height: 7vw;
+        background-size: 9vw auto;
+        
+        left: 51vw;
+        top: 20vw;
+        z-index: 1;
     }
 
     .libero:hover{
-        position: absolute;
-        left: 51.5vw;
-        top: 39vh;
-        width: 17vh;        
-        /* box-shadow: 0px 0px 10px rgba(255, 255, 255, 255); */
+        width: 9.5vw;
+        height: 7.5vw;
+        background-size: 9.5vw auto;
+        left: 51vw;
+        top: 20vw;
     }
 
     .click_back{
         position: absolute;
-        left: 7.7vw;
+        left: 8.2vw;
         height: 100vh;        
         z-index: 5;
     }
 
+    #setter_back_id{
+        background-image: url("src/第三頁(舉球)/3-背景.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        display: flex;
+
+        width: 100vw;
+        height: 56.25vw;
+        background-size: 100vw auto;
+
+        top: 0%;
+
+        z-index: 10;
+    }
+
+    #middle_back_id{
+        background-image: url("src/第四頁(中間手)/4-背景.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        display: flex;
+
+        width: 100vw;
+        height: 56.25vw;
+        background-size: 100vw auto;
+
+        top: 0%;
+
+        z-index: 10;
+    }
+
+    #libero_back_id{
+        background-image: url("src/第五頁(自由球員)/5-背景.jpg");
+        background-repeat: no-repeat;
+        background-position: center;
+        position: absolute;
+        display: flex;
+
+        width: 100vw;
+        height: 56.25vw;
+        background-size: 100vw auto;
+
+        top: 0%;
+
+        z-index: 10;
+    }
+
+
     #back_button{
         position: absolute;
-        left: 30vw;
-        top: 7vh;
-        width: 180px;        
+        left: 28vw;
+        top: 4vw;
+        width: 13vw;        
         z-index: 6;
     }
 
     .div_limit{
         position: absolute;
-        height: 500px;
-        width: 733px;
-        left: 41.05vw;
-        top: 28vh;
+        height: 38vw;
+        width: 56vw;
+        left: 41vw;
+        top: 16vw;
         overflow-y: auto;
+        overflow-x: hidden;
         z-index: 7;
     }
 
     .word{
-        width: 35vw;
+        width: 40vw;
         height: auto;
     }
 
     .div_limit::-webkit-scrollbar {
-        width:7px;
+        width:7.5px;
         height:500px;
     }
 

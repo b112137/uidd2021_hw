@@ -2,28 +2,43 @@
 <html>
     <head>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     </head>
 
     <body>
         <div class = "background">
-            <div>
-                <a  href = "./choose.html">
-                    <img src="src/第一頁/1-按鈕.png" class = "go_button" type = "button" onclick="test()">
-                </a>
-            </div>
+            <a  href = "./choose.html">
+                <div class = "go_button">
+                
+                    <!-- <img src="src/第一頁/1-按鈕.png"  type = "button" onclick="test()"> -->
+                </div>
+            </a>
+            
         </div>
     </body>
 </html>
 
 <style>
+    body {
+        margin :0;
+        padding: 0;
+        overflow-x: hidden;
+    }
     .background {
         background-image: url("src/第一頁/1-背景.jpg");
         background-repeat: no-repeat;
         background-position: center;
-        display: flex;
-        flex-direction: column;
-        height: 100vh;
-        background-size: auto 100vh;
+        /* display: flex; */
+        /* flex-direction: column; */
+
+        /* height: 100vh; */
+        /* background-size: auto 100vh; */
+        
+        width: 100vw;
+        height: 56.25vw;
+        background-size: 100vw auto;
+
         z-index: -1;
     }
 
@@ -34,19 +49,27 @@
         justify-content: center;
         z-index: -1;
     }
-    .go_button {   
-        position: absolute;
-        left: 42.5vw;
-        top: 58vh;
-        width: 180px;        
+    .go_button {
+        background-image: url("src/第一頁/1-按鈕.png");
+        background-repeat: no-repeat;
+        background-position: center;
+
+        position: relative;
+        width: 12vw;
+        height: 5vw;
+        background-size: 12vw auto;
+        
+        left: 42.5%;
+        top: 58%;
         z-index: 1;
     }
 
     .go_button:hover {
-        position: absolute;
+        /* position: relative;
         left: 42vw;
         top: 57.5vh;
-        width: 200px;        
+        width: 200px; */
+
         box-shadow: 0px 0px 15px rgba(255, 255, 255, 255);
     }
 </style>
