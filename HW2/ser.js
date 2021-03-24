@@ -73,7 +73,11 @@ app.get('/add', (req, res) => {
   var result = JSON.parse(fs.readFileSync(file));
   result[req.query.student_ID] = req.query.student_name;
   console.log(result);
-  res.send("OK");
+
+  fs.writeFileSync(file, JSON.stringify(result));
+
+
+  res.send("Success.");
 })
 
 
