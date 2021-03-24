@@ -86,7 +86,7 @@ app.get('/delete', (req, res) => {
   var search_result = result[req.query.student_ID];
   if(search_result){
     delete result[req.query.student_ID];
-    console.log(req.query.student_ID);
+    console.log(result);
     res.send('Hello, ' + search_result + '');
   }
   else{
