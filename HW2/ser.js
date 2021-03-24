@@ -59,8 +59,8 @@ app.get('/list', (req, res) => {
 app.get('/search', (req, res) => {
   var file = "students.sample.json";
   var result = JSON.parse(fs.readFileSync(file));
-  // console.log(req.query.fname);
-  // console.log(result[req.query.fname]);
+  console.log(req.query.fname);
+  console.log(result[req.query.fname]);
 
   res.send("get");
 })
