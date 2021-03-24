@@ -36,6 +36,17 @@ $(document).ready(function() {
     )
   })
 
+  $('#delete_student_button').click((event) => {
+    event.preventDefault()
+    $.get('./delete', {
+        student_ID: $('#delete_student_ID').val()
+      }, (data) => {        
+        console.log(data)
+        $('#delete_student').html('<h2>' + data + '</h2>');
+      }  
+    )
+  })
+
 
 
 

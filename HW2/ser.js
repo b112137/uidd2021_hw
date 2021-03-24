@@ -80,6 +80,18 @@ app.get('/add', (req, res) => {
   res.send("Success.");
 })
 
+app.get('/delete', (req, res) => {
+  var file = "students.sample.json";
+  var result = JSON.parse(fs.readFileSync(file));
+  var search_result = result[req.query.student_ID];
+  if(search_result){
+    delete search_result
+    res.send('Hello, ' + search_result + '');
+  }
+  else{
+    res.send('Not Found.');
+  }
+})
 
 
 
