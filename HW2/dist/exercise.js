@@ -3,7 +3,13 @@ $(document).ready(function() {
     event.preventDefault()
     $.get('./list', {
       }, (data) => {
-          $('#list_students').html(data)     
+        var result = [];
+
+        for(var i in data)
+            result.push([i, data[i]]);
+        
+        console.log(result)
+        $('#list_students').html(result)     
       }  
     )
   })
