@@ -85,7 +85,8 @@ app.get('/delete', (req, res) => {
   var result = JSON.parse(fs.readFileSync(file));
   var search_result = result[req.query.student_ID];
   if(search_result){
-    delete search_result
+    delete result[req.query.student_ID];
+    console.log(req.query.student_ID);
     res.send('Hello, ' + search_result + '');
   }
   else{
