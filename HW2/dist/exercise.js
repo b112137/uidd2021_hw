@@ -15,7 +15,7 @@ $(document).ready(function() {
 
   $('#search_student_button').click((event) => {
     event.preventDefault()
-    $.get('./list', {
+    $.get('./search', {
       }, (data) => {        
         console.log(data)
         $('#search_student').html(data)     
