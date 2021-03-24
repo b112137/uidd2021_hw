@@ -3,7 +3,8 @@
 // Step 1 and step 2 code goes here
 
 // include `express`
-const express = require('express')
+const express = require('express');
+const fs = require('fs');
 
 // create an express, aka web server, instance
 const app = express()
@@ -46,6 +47,10 @@ app.get('/step5', (req, res) => {
 
 
 app.get('/list', (req, res) => {
+
+  var file="students.sample.json";
+  var result=JSON.parse(fs.readFileSync(file));
+  console.log(result);
   res.send(`Hello`)
 })
 
