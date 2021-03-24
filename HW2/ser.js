@@ -51,7 +51,7 @@ app.get('/list', (req, res) => {
   var file="students.sample.json";
   var result=JSON.parse(fs.readFileSync(file));
   console.log(result);
-  res.send(`Hello`)
+  res.send(result)
 })
 
 
