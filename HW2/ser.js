@@ -9,7 +9,7 @@ const fs = require('fs');
 // create an express, aka web server, instance
 const app = express()
 
-const port = 17269
+const port = 26969
 
 // handle `/step1` url
 app.get('/step1', (req, res) => {
