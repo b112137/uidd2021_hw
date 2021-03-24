@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>http & ajax exercise</title>
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+  </head>
+  <body>
+
+    <button id ="list_students_button" type="submit">list all students</button>
+
+    <div id = "list_students"></div>
+    <div>&nbsp</div>
+
+    <!-- Step 6 code goes here -->
+    
+    <form action="./step5" method="get">
+        student ID: <input type="text" name="fname"><br>
+        <button type="submit">search specific student</button>
+    </form>
+    <div>&nbsp</div>
+
+    <!-- Step 7 code goes here -->
+
+    <form action="./step7" method="post">
+        student ID: <input type="text" name="fname"><br>
+        student name: <input type="text" name="lname"><br>
+        <button type="submit">add new student</button>
+    </form>
+    <div>&nbsp</div>
+
+    <!-- Step 8 code goes here -->
+
+    <form id="ajax-form">
+        student ID: <input type="text" name="fname"><br>
+        <button type="submit">delete specific student</button>
+    </form>
+    
+
+
+    <!-- Step 10 code goes here -->
+
+    
+    <div id="ajax-output"></div>
+
+
+    <script src="./exercise.js"></script>
+  </body>
+</html>
