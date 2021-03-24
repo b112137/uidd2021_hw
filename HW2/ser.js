@@ -59,10 +59,15 @@ app.get('/list', (req, res) => {
 app.get('/search', (req, res) => {
   var file = "students.sample.json";
   var result = JSON.parse(fs.readFileSync(file));
-  console.log(req.query.student_ID);
-  console.log(result[req.query.student_ID]);
+  var search_result = result[req.query.student_ID];
+  if(search_result){
+    res.send('Hello, ' + search_result + '');
+  }
+  else{
+    res.send('Not Found.');
+  }
 
-  res.send(`${req.query.student_ID}`);
+  
 })
 
 
