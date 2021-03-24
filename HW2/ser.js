@@ -62,7 +62,7 @@ app.get('/search', (req, res) => {
   console.log(req);
   console.log(result[req.query.fname]);
 
-  res.send("get");
+  res.send(`${req.query.fname}`);
 })
 
 
