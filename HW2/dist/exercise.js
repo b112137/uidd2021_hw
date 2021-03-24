@@ -19,7 +19,19 @@ $(document).ready(function() {
         student_ID: $('#search_student_ID').val()
       }, (data) => {        
         console.log(data)
-        $('#search_student').html(data)     
+        $('#search_student').html('<h2>' + data + '</h2>');
+      }  
+    )
+  })
+
+  $('#add_students_button').click((event) => {
+    event.preventDefault()
+    $.get('./add', {
+        student_ID: $('#add_student_ID').val(),
+        student_name: $('#add_student_name').val()
+      }, (data) => {        
+        console.log(data)
+        $('#add_student').html('<h2>' + data + '</h2>');
       }  
     )
   })
