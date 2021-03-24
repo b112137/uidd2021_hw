@@ -48,10 +48,11 @@ app.get('/step5', (req, res) => {
 
 app.get('/list', (req, res) => {
 
-  var file="students.sample.json";
-  var result=JSON.parse(fs.readFileSync(file));
-  console.log(result);
-  res.send(result)
+  var file = "students.sample.json";
+  var result = JSON.parse(fs.readFileSync(file));
+  var result_string = JSON.stringify(result);
+  console.log(result_string);
+  res.send(result_string);
 })
 
 
