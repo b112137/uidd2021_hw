@@ -6,7 +6,7 @@ $(document).ready(function() {
         var result = [];
 
         for(var i in data)
-            result.push([i, data[i]]);
+            result.push('"'+ i + '":"' + data[i] + '"');
         
         console.log(result)
         $('#list_students').html(result)     
