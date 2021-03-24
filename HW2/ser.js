@@ -46,33 +46,28 @@ app.get('/step5', (req, res) => {
 
 
 
-app.get('/list', (req, res) => {
 
+
+app.get('/list', (req, res) => {
   var file = "students.sample.json";
   var result = JSON.parse(fs.readFileSync(file));
-  var result_string = JSON.stringify(result);
-  console.log(result_string);
-  res.send(result_string);
+  // var result_string = JSON.stringify(result);
+  console.log(result);
+  res.send(result);
+})
+
+app.get('/search', (req, res) => {
+  var file = "students.sample.json";
+  var result = JSON.parse(fs.readFileSync(file));
+  console.log(req.query.fname);
+  console.log(result[req.query.fname]);
+
+  res.send("get");
 })
 
 
 
 
-
-
-// Step 7 code goes here
-const bodyParser = require('body-parser')
-
-// setup `body-parser`
-// �]�w `body-parser`
-app.use(bodyParser.urlencoded({ extended: false }))
-app.use(bodyParser.json())
-
-app.post('/step7', (req, res) => {
-   // `bady-parser` stores parsed data in `req.body`
-     // `bady-parser` �N�ѪR�n����Ʀs��b `req.body`
-       res.send(`Hello, ${req.body.fname} ${req.body.lname}`)
-})
 
 
 

@@ -4,7 +4,6 @@ $(document).ready(function() {
     $.get('./list', {
       }, (data) => {
         var result = [];
-
         for(var i in data)
             result.push('"'+ i + '":"' + data[i] + '"<br>');
         
@@ -13,6 +12,18 @@ $(document).ready(function() {
       }  
     )
   })
+
+  $('#search_student_button').click((event) => {
+    event.preventDefault()
+    $.get('./list', {
+      }, (data) => {        
+        console.log(data)
+        $('#search_student').html(data)     
+      }  
+    )
+  })
+
+
 
 
 
