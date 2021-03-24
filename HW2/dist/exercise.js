@@ -16,6 +16,7 @@ $(document).ready(function() {
   $('#search_student_button').click((event) => {
     event.preventDefault()
     $.get('./search', {
+        student_ID: $('#search_student_ID"]').val()
       }, (data) => {        
         console.log(data)
         $('#search_student').html(data)     
