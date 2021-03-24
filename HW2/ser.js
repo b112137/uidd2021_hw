@@ -18,7 +18,6 @@ app.use(express.static(`${__dirname}/dist`))
 app.get('/list', (req, res) => {
   var file = "students.sample.json";
   var result = JSON.parse(fs.readFileSync(file));
-  console.log(result);
   res.send(result);
 })
 
@@ -38,11 +37,7 @@ app.get('/add', (req, res) => {
   var file = "students.sample.json";
   var result = JSON.parse(fs.readFileSync(file));
   result[req.query.student_ID] = req.query.student_name;
-  console.log(result);
-
   fs.writeFileSync(file, JSON.stringify(result));
-
-
   res.send("Success.");
 })
 
